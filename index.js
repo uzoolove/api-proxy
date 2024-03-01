@@ -10,11 +10,10 @@ import greenlock from 'greenlock-express';
 
 // proxy middleware options
 const options = {
-  target: 'http://frontendschool.shop:33010', // target host
-  changeOrigin: true, // needed for virtual hosted sites
+  target: 'http://frontendschool.shop:33030', // target host
+  changeOrigin: false, // needed for virtual hosted sites
   ws: true, // proxy websockets
   router: {
-    'motizen.frontendschool.shop:33080': 'http://frontendschool.shop:33010',
     'todo.frontendschool.shop': 'http://frontendschool.shop:33010',
     'todo-api.frontendschool.shop': 'http://frontendschool.shop:33020',
     'frontendschool.shop': 'http://frontendschool.shop:33030',
@@ -29,7 +28,7 @@ const todoApiProxy = proxy.createProxyMiddleware(options);
 const app = express();
 
 app.use('/', (req, res, next) => {
-  console.log(req.headers)
+  console.log(req.url)
   next();
 });
 
