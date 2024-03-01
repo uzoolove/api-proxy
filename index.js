@@ -15,10 +15,10 @@ const options = {
   ws: true, // proxy websockets
   router: {
     'motizen.frontendschool.shop:33080': 'http://frontendschool.shop:33010',
-    'todo.frontendschool.shop:443': 'http://frontendschool.shop:33010',
-    'todo-api.frontendschool.shop:443': 'http://frontendschool.shop:33020',
-    'frontendschool.shop:443': 'http://frontendschool.shop:33030',
-    'api.frontendschool.shop:443': 'http://frontendschool.shop:33040',
+    'todo.frontendschool.shop': 'http://frontendschool.shop:33010',
+    'todo-api.frontendschool.shop': 'http://frontendschool.shop:33020',
+    'frontendschool.shop': 'http://frontendschool.shop:33030',
+    'api.frontendschool.shop': 'http://frontendschool.shop:33040',
   },
 };
 
