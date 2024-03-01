@@ -1,0 +1,8 @@
+{ 
+  "sites": [
+    { "subject": "todo.frontendschool.shop", "altnames": ["todo.frontendschool.shop"] },
+    { "subject": "todo-api.frontendschool.shop", "altnames": ["todo-api.frontendschool.shop"] },
+    { "subject": "shopping.frontendschool.shop", "altnames": ["shopping.frontendschool.shop"] },
+    { "subject": "shopping-api.frontendschool.shop", "altnames": ["shopping-api.frontendschool.shop"] }
+  ]
+} 
