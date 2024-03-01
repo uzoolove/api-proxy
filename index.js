@@ -28,7 +28,7 @@ const todoApiProxy = proxy.createProxyMiddleware(options);
 const app = express();
 
 app.use('/', (req, res, next) => {
-  console.log(req.url)
+  console.log(`${req.headers.host}${req.url})
   next();
 });
 
