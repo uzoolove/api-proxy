@@ -1,8 +1,8 @@
 { 
   "sites": [
+    { "subject": "frontendschool.shop", "altnames": ["frontendschool.shop"] },
+    { "subject": "api.frontendschool.shop", "altnames": ["api.frontendschool.shop"] },
     { "subject": "todo.frontendschool.shop", "altnames": ["todo.frontendschool.shop"] },
-    { "subject": "todo-api.frontendschool.shop", "altnames": ["todo-api.frontendschool.shop"] },
-    { "subject": "shopping.frontendschool.shop", "altnames": ["shopping.frontendschool.shop"] },
-    { "subject": "shopping-api.frontendschool.shop", "altnames": ["shopping-api.frontendschool.shop"] }
+    { "subject": "todo-api.frontendschool.shop", "altnames": ["todo-api.frontendschool.shop"] }
   ]
 } 
