@@ -12,6 +12,10 @@ import greenlock from 'greenlock-express';
 const options = {
   target: 'http://frontendschool.shop:33030', // target host
   changeOrigin: false, // needed for virtual hosted sites
+  onProxyReq: (proxyReq, req, res) => {
+    // 클라이언트의 IP 주소를 프록시 요청 헤더에 추가
+    proxyReq.setHeader('x-forwarded-for', req.ip);
+  },
   ws: true, // proxy websockets
   router: {
     'todo.frontendschool.shop': 'http://frontendschool.shop:33010',
