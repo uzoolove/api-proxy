@@ -10,7 +10,7 @@ import greenlock from 'greenlock-express';
 
 // proxy middleware options
 const options = {
-  target: 'http://frontendschool.shop:33030', // target host
+  target: 'http://fesp.shop:33030', // target host
   changeOrigin: false, // needed for virtual hosted sites
   onProxyReq: (proxyReq, req, res) => {
     // 클라이언트의 IP 주소를 프록시 요청 헤더에 추가
@@ -18,10 +18,10 @@ const options = {
   },
   ws: true, // proxy websockets
   router: {
-    'todo.frontendschool.shop': 'http://frontendschool.shop:33010',
-    'todo-api.frontendschool.shop': 'http://frontendschool.shop:33020',
-    'frontendschool.shop': 'http://frontendschool.shop:33030',
-    'api.frontendschool.shop': 'http://frontendschool.shop:33040',
+    'todo.fesp.shop': 'http://fesp.shop:33010',
+    'todo-api.fesp.shop': 'http://fesp.shop:33020',
+    'fesp.shop': 'http://fesp.shop:33030',
+    'api.fesp.shop': 'http://fesp.shop:33040',
   },
 };
 
@@ -40,6 +40,7 @@ app.use(cors({
   origin: [
     /^https?:\/\/localhost/,
     /^https?:\/\/127.0.0.1/,
+    /netlify.app$/,
     new RegExp(process.env.DOMAIN)
   ],
   credentials: true,
