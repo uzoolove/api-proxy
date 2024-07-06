@@ -1,8 +1,6 @@
 { 
   "sites": [
     { "subject": "fesp.shop", "altnames": ["fesp.shop"] },
-    { "subject": "api.fesp.shop", "altnames": ["api.fesp.shop"] },
-    { "subject": "todo.fesp.shop", "altnames": ["todo.fesp.shop"] },
-    { "subject": "todo-api.fesp.shop", "altnames": ["todo-api.fesp.shop"] }
+    { "subject": "api.fesp.shop", "altnames": ["api.fesp.shop"] }
   ]
 } 
