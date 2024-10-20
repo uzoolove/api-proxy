@@ -22,7 +22,7 @@ const options = {
     // 'todo-api.fesp.shop': 'http://fesp.shop:33020',
     'fesp.shop': 'http://fesp.shop:33030',
     'api.fesp.shop': 'http://fesp.shop:33040',
-    '11.fesp.shop': 'http://fesp.shop:33040',
+    '11.fesp.shop': 'http://fesp.shop:33011',
   },
 };
 
