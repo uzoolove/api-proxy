@@ -18,8 +18,8 @@ const options = {
   },
   ws: true, // proxy websockets
   router: {
-    // 'todo.fesp.shop': 'http://fesp.shop:33010',
-    // 'todo-api.fesp.shop': 'http://fesp.shop:33020',
+    'todo.fesp.shop': 'http://fesp.shop:33010',
+    'todo-api.fesp.shop': 'http://fesp.shop:33020',
     'fesp.shop': 'http://fesp.shop:33030',
     'api.fesp.shop': 'http://fesp.shop:33040',
     '11.fesp.shop': 'http://fesp.shop:33011',
