@@ -29,7 +29,7 @@ const options = {
     console.error(`대상 호스트: ${req.headers.host}`);
     console.error(`요청 URL: ${req.url}`);
     res.writeHead(500, {
-      'Content-Type': 'text/plain'
+      'Content-Type': 'text/plain;charset=UTF-8'
     });
     res.end(`프록시 요청 중 오류가 발생했습니다: ${err.message}`);
   },
