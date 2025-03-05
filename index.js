@@ -58,20 +58,7 @@ app.use(cors({
   credentials: true,
 }));
 
-app.get('/proxy-status', (req, res) => {
-  res.json({
-    status: 'running',
-    routes: options.router,
-    host: req.headers.host
-  });
-});
-
 app.use('/', todoApiProxy);
-
-app.use((err, req, res, next) => {
-  console.error('Express 오류:', err);
-  res.status(500).send('서버 오류가 발생했습니다.');
-});
 
 greenlock.init({
   packageRoot: '.',
