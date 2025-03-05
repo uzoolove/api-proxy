@@ -10,7 +10,7 @@ import greenlock from 'greenlock-express';
 
 // proxy middleware options
 const options = {
-  target: 'http://fesp.shop:33030', // target host
+  target: 'http://localhost:33030', // router에 매칭되는 도메인이 없으면 기본으로 사용할 주소
   changeOrigin: false, // needed for virtual hosted sites
   onProxyReq: (proxyReq, req, res) => {
     // 클라이언트의 IP 주소를 프록시 요청 헤더에 추가
