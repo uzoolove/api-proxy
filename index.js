@@ -24,6 +24,17 @@ const options = {
     'api.fesp.shop': 'http://fesp.shop:33040',
     '11.fesp.shop': 'http://fesp.shop:33011',
   },
+  onError: (err, req, res) => {
+    console.error(`프록시 오류 발생: ${err.message}`);
+    console.error(`대상 호스트: ${req.headers.host}`);
+    console.error(`요청 URL: ${req.url}`);
+    res.writeHead(500, {
+      'Content-Type': 'text/plain'
+    });
+    res.end(`프록시 요청 중 오류가 발생했습니다: ${err.message}`);
+  },
+  logLevel: 'debug',
+  logProvider: () => console
 };
 
 // create the proxy (without context)
@@ -47,7 +58,20 @@ app.use(cors({
   credentials: true,
 }));
 
+app.get('/proxy-status', (req, res) => {
+  res.json({
+    status: 'running',
+    routes: options.router,
+    host: req.headers.host
+  });
+});
+
 app.use('/', todoApiProxy);
+
+app.use((err, req, res, next) => {
+  console.error('Express 오류:', err);
+  res.status(500).send('서버 오류가 발생했습니다.');
+});
 
 greenlock.init({
   packageRoot: '.',
