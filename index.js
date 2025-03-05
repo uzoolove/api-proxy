@@ -18,11 +18,11 @@ const options = {
   },
   ws: true, // proxy websockets
   router: {
-    'todo.fesp.shop': 'http://fesp.shop:33010',
-    'todo-api.fesp.shop': 'http://fesp.shop:33020',
-    'fesp.shop': 'http://fesp.shop:33030',
-    'api.fesp.shop': 'http://fesp.shop:33040',
-    '11.fesp.shop': 'http://fesp.shop:33011',
+    'todo.fesp.shop': 'http://localhost:33010',
+    'todo-api.fesp.shop': 'http://localhost:33020',
+    'fesp.shop': 'http://localhost:33030',
+    'api.fesp.shop': 'http://localhost:33040',
+    '11.fesp.shop': 'http://localhost:33011',
   },
   onError: (err, req, res) => {
     console.error(`프록시 오류 발생: ${err.message}`);
